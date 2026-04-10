@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FoodCaretakerAI Ultimate</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="header">🔥 FoodCaretakerAI</div>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <div class="card center">
+    <h2>Welcome 👋</h2>
+    <button onclick="go('profile')">Start</button>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="page">
+  <div class="card">
+    <h3>Profile</h3>
+    <input id="height" placeholder="Height (cm)">
+    <input id="weight" placeholder="Weight (kg)">
+    <select id="goal">
+      <option value="lose">Lose Weight</option>
+      <option value="gain">Gain Weight</option>
+      <option value="maintain">Maintain</option>
+    </select>
+    <button onclick="saveProfile()">Save</button>
+  </div>
+</div>
+
+<!-- PLAN -->
+<div id="plan" class="page">
+  <div class="card">
+    <h3>30-Day Plan</h3>
+    <button onclick="generatePlan()">Generate Plan</button>
+    <div id="planBox"></div>
+
+    <h4>Daily Check</h4>
+    <input id="dailyWeight" placeholder="Today's Weight">
+    <button onclick="saveDaily()">Save Today</button>
+    <div id="progress"></div>
+  </div>
+</div>
+
+<!-- SCAN -->
+<div id="scan" class="page">
+  <div class="card">
+    <video id="video" autoplay></video>
+    <button onclick="startCamera()">Start Camera</button>
+    <button onclick="scanFood()">Scan</button>
+    <div id="scanResult"></div>
+    <div id="choices"></div>
+  </div>
+</div>
+
+<!-- BMI -->
+<div id="bmi" class="page">
+  <div class="card">
+    <button onclick="calcBMI()">Check BMI</button>
+    <div id="bmiResult"></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button onclick="go('home')">🏠</button>
+  <button onclick="go('profile')">👤</button>
+  <button onclick="go('plan')">📅</button>
+  <button onclick="go('scan')">📷</button>
+  <button onclick="go('bmi')">📊</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

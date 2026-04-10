@@ -1,0 +1,91 @@
+body {
+  margin:0;
+  font-family:-apple-system;
+  background:linear-gradient(135deg,#000428,#004e92);
+}
+
+.app {
+  max-width:390px;
+  margin:auto;
+  background:#f9f9fb;
+  min-height:100vh;
+  border-radius:30px;
+  border:6px solid black;
+}
+
+.header {
+  text-align:center;
+  padding:15px;
+  font-weight:bold;
+  background:white;
+}
+
+.page {
+  display:none;
+  padding:15px;
+  animation:fade 0.4s;
+}
+
+.active { display:block; }
+
+@keyframes fade {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1;}
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.center { text-align:center; }
+
+input, select {
+  width:auto;
+  padding:12px;
+  margin-top:10px;
+  border-radius:12px;
+}
+
+button {
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  border-radius:14px;
+  border:none;
+  background:linear-gradient(135deg,#ff416c,#ff4b2b);
+  color:white;
+}
+
+video {
+  width:100%;
+  border-radius:15px;
+}
+
+#scanResult, #bmiResult, #planBox, #progress {
+  margin-top:10px;
+  padding:12px;
+  background:#eee;
+  border-radius:12px;
+  white-space:pre-line;
+}
+
+.choice-btn {
+  background:#34c759;
+}
+
+.nav {
+  position:fixed;
+  bottom:0;
+  width:390px;
+  display:flex;
+  background:white;
+}
+
+.nav button {
+  flex:1;
+  background:none;
+  color:black;
+}
